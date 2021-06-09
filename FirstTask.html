@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #changecolor {
+        width: 100vw;
+        height: 100vh;
+      }
+      #color-button {
+        background-color: orange; /* Green */
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+      }
+      #color-button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+  <body>
+        <form name="myform">
+            Enter the number:
+            <input type="text" name=n value="">
+              
+            <br><br>
+              
+            <input type="button" value="Check" onClick="p()">
+            <br>
+        </form>
+
+    <script type="text/javascript">
+      
+     
+      function p() {
+            
+          var n, i, flag = true;
+          n = document.myform.n.value;
+          n = parseInt(n)
+          for(i = 2; i <= n - 1; i++)
+              if (n % i == 0) {
+                  flag = false;
+                  break;
+              }
+                
+          if (flag == true)
+              alert(n + " is prime");
+          else
+              alert(n + " is not prime");
+      }
+  </script>
+  </body>
+</html>
